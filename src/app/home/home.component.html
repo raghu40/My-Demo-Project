@@ -1,0 +1,78 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to my Demo Project</h1>
+  <p class="text-uppercase">This is sample Angular14 Demo...</p>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let data of getData; let i=index;">
+      <h3>{{ data.author }}</h3>
+      <div class="thumbnail">
+        <a [routerLink]="['homedetails']" (click)="passData(data)">
+          <img src="{{ data.image_path }}" alt="{{data.image_name}}" />
+          <div class="caption">
+            <p class="text-center"><b> Week: </b>  {{data.week}}</p>
+            <p class="text-center"><b>Date: </b>{{data.startdate | date:'dd-MM-YY'}}</p>
+            <h5 class="text-center card-title"><b>Title: </b>{{data.title}}</h5>
+            <p class="text-center"><b>Description: </b>{{data.description}}</p>
+				  	<p class="text-center"><b>Category: </b>{{data.category}}</p>
+				  	 
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--  <div class="col-md-3">
+      <h3>this is the block2</h3>
+      <div class="thumbnail">
+        <a href="https://www.w3schools.com/bootstrap/newyork.jpg">
+          <img
+            src="https://www.w3schools.com/bootstrap/newyork.jpg"
+            alt="mydata"
+          />
+          <div class="caption">
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3>this is the block3</h3>
+      <div class="thumbnail">
+        <a href="https://www.w3schools.com/bootstrap/sanfran.jpg">
+          <img
+            src="https://www.w3schools.com/bootstrap/sanfran.jpg"
+            alt="mydata"
+          />
+          <div class="caption">
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3>this is the block4</h3>
+      <div class="thumbnail">
+        <a href="https://www.w3schools.com/bootstrap/cinqueterre.jpg">
+          <img
+            src="https://www.w3schools.com/bootstrap/cinqueterre.jpg"
+            alt="mydata"
+          />
+          <div class="caption">
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+            <p class="text-center">Paragraph-1</p>
+          </div>
+        </a>
+      </div>
+    </div> -->
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">New <span class="badge">12</span></li>
+    <li class="list-group-item">New <span class="badge">12</span></li>
+    <li class="list-group-item">New <span class="badge">12</span></li>
+  </ul>
+</div>
